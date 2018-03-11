@@ -1,7 +1,7 @@
 const auth0 = require('azure-functions-auth0')({  
-    clientId: 'YOUR_CLIENT_ID',
-    clientSecret: 'YOUR_CLIENT_SECRET',
-    domain: 'YOUR_DOMAIN'
+    clientId: process.env.AUTH0_CLIENT_ID,
+    clientSecret: process.env.AUTH0_CLIENT_SECRET,
+    domain: process.env.AUTH0_DOMAIN
 });
   
 module.exports = auth0(function(context, req) {  
